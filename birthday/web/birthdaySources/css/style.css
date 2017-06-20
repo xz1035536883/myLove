@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300); 
+.panel{
+  position: absolute;top: 0;left: 0;right: 0;
+  width: 600px; 
+  height: 40px;
+  padding: 40px;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+  background: #D5AC80; 
+  box-shadow: 1px 1px 100px rgba(255,255,255,1), inset  1px 1px 60px rgba(255,255,255,.4);
+}
+.wrap{ 
+  position: relative;
+  overflow: hidden;
+  z-index: 0;  
+  background: #fff;
+  box-shadow: -1px -1px 1px rgba(0,0,0,.4),
+              1px 1px 1px rgba(255,255,255,.4);
+}
+.wrap:after,
+.wrap:before{
+  content: '逗比生日快乐，输入你想要的生日礼物，不许不填哦';
+  display: block;
+  position: absolute;
+  top: 0;left: 0;
+  overflow: hidden;
+  line-height: 44px;
+  color:rgba(255,255,255,.3);
+  font-size: 20px;
+  width: 100%;height: 50%;
+  background: #000;
+  z-index: 1;
+  box-shadow: 1px 1px 100px rgba(255,255,255,1), inset  1px 1px 60px rgba(255,255,255,.4);
+  transition:.3s all;
+  -webkit-transition:.3s all;
+  -webkit-transform:translate3d(0,0,0);
+  transform:translate3d(0,0,0);
+}
+.wrap:before{
+  top: auto;
+  bottom: 0;
+  line-height: 0px;
+}
+.wrap:hover:after{
+  top: -50%;
+}
+.wrap:hover:before{
+  bottom: -50%;
+}
+input{
+  width: 100%;
+  height: 44px;
+  padding: 0 65px 0 10px;
+  font-size: 16px;
+  border:0;
+  box-shadow: inset 1px 1px 11px rgba(0,0,0,.3);  
+} 
+input:focus { 
+  outline: none; 
+}
+button{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 50px;
+  height: 35px;
+  cursor: pointer;
+}
